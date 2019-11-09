@@ -9,14 +9,18 @@ class Welcome extends React.Component {
     super(props);
 
     this.state = {};
+    this.updateColor = this.updateColor.bind(this);
   }
 
+  updateColor(color) {
+
+  }
 
 
   render() {
     return(
       <body>
-        <NameBox />
+        <NameBox currentColor={this.props.currentColor}/>
         <div class="welcome">Welcome to my personal page. Let's see what we can achieve together!</div>
         <VSpace padding={200}/>
         <div id="sc">

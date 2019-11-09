@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import TestApp from './TestApp';
 import Welcome from './welcome/welcome'
+import Home from './home/home'
 import * as serviceWorker from './serviceWorker';
 
 
@@ -12,8 +13,8 @@ ReactDOM.render(
   <html>
     <body>
       <div id="app">
-        <div id="scroll-container" style={{overflow: "hidden"}}>
-          <Welcome />
+        <div id="scroll-container" style={{overflow: "scroll"}}>
+          <Home />
       </div>
       </div>
     </body>
