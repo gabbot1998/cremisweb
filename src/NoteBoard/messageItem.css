@@ -1,0 +1,25 @@
+.message {
+  box-sizing: border-box;
+  padding-top: 10px;
+  width: 20vw;
+  height: 10vh;
+  font-size: 25px;
+}
+
+.message:hover {
+  font-size: 40px;
+}
+
+.name {
+  font-family: "Arial";
+  font-size: 16px;
+  float:right;
+}
+
+.quote {
+  display: inline-block;
+  border: 5px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+}

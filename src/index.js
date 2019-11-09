@@ -2,9 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import TestApp from './TestApp';
+import Welcome from './welcome/welcome'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+//ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <html>
+    <body>
+      <div id="app">
+        <div id="scroll-container" style={{overflow: "hidden"}}>
+          <Welcome />
+      </div>
+      </div>
+    </body>
+  </html>, document.getElementById('root'));
+//ReactDOM.render(<div>hejo</div>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+.nameBoxRed {
+  background-color: rgba(234, 62, 55, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.nameBoxOrange {
+  background-color: rgba(246, 143, 31, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.nameBoxYellow {
+  background-color: rgba(246, 213, 9, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.nameBoxGreen {
+  background-color: rgba(168, 203, 56, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.nameBoxBlue {
+  background-color: rgba(32, 154, 207, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.nameBoxPurple {
+  background-color: rgba(170, 82, 160, 0.9);
+  text-align: center;
+  line-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
