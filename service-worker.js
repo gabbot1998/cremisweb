@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cremisweb/precache-manifest.928220ef316d2f5529dd5364716d4132.js"
+  "/cremisweb/precache-manifest.bed260cd1623fd82ec7d6b47b1215d61.js"
 );
 
 self.addEventListener('message', (event) => {
