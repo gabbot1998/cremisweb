@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link, animateScroll as scroll} from "react-scroll";
+
 import './nameBox.css';
 
   const name = "CREMIS";
@@ -31,13 +33,14 @@ class NameBox extends React.Component {
       1000);
   }
 
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
 
   render() {
     return(
-      <div class={this.state.nameBox}> {this.state.name}</div>
+      <div onClick={scroll.scrollToBottom} class={this.state.nameBox} style={this.props.currentColor}> {this.state.name}</div>
     );
   }
 
