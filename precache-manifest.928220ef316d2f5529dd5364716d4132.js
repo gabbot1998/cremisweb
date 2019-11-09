@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9c62af36e5667533025cc442b50eb611",
+    "revision": "15889ab0d397ffa87775d3fd8effa64b",
     "url": "/cremisweb/index.html"
   },
   {
-    "revision": "e713d7401bd4b2b8e516",
+    "revision": "3117861cbaf0beb77931",
     "url": "/cremisweb/static/css/main.71670990.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cremisweb/static/js/2.6f0fe2f9.chunk.js"
   },
   {
-    "revision": "e713d7401bd4b2b8e516",
-    "url": "/cremisweb/static/js/main.28c1c89d.chunk.js"
+    "revision": "3117861cbaf0beb77931",
+    "url": "/cremisweb/static/js/main.60ec6a91.chunk.js"
   },
   {
     "revision": "4b1aad46e84a0322d0c0",
