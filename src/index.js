@@ -13,7 +13,7 @@ ReactDOM.render(
   <html>
     <body>
       <div id="app">
-        <div id="scroll-container" style={{overflow: "scroll"}}>
+        <div id="scroll-container" style={{overflow: "hidden"}}>
           <Home />
       </div>
       </div>

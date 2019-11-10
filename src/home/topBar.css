@@ -8,7 +8,7 @@
   color: white;
   position: fixed;
   top: 0;
-  width: 130px;
+  width: 100px;
   margin-left: 10px;
   margin-top: 10px;
   text-align: center;
@@ -18,4 +18,8 @@
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+.stickyTopBar:hover {
+  cursor: pointer;
 }
