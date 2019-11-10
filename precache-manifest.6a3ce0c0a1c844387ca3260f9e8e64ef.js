@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65b929df75bdeb25a65b2d7b3cadfe5b",
+    "revision": "004e914d9495821e266a931978878f1b",
     "url": "/cremisweb/index.html"
   },
   {
