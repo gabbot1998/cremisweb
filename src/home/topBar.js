@@ -13,8 +13,8 @@ class TopBar extends React.Component {
     return(
       <React.Fragment>
           <nav id="topBar" className="navbar navbar-dark bg-dark mb-3">
-            <a className="navbar-brand" href="#">
-              <div class="stickyTopBar" style={this.props.currentColor}>CREMIS</div>
+            <a className="navbar-brand">
+              <div class="stickyTopBar" style={this.props.currentColor}>{this.props.text}</div>
             </a>
           </nav>
         </React.Fragment>

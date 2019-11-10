@@ -15,15 +15,19 @@ const prideColors = [ {backgroundColor: "rgba(234, 62, 55, 0.9)"},
                       {backgroundColor: "rgba(170, 82, 160, 0.9)"},
                      ];
 
+const interval = clearInterval();
+
 //The entire application will live inside of the home component!
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
 
-    this.state = {colorIndex: 0, currentColor: {}, updateColor: true, topBar: <div></div>, hasRenderedTopBar: false};
+    this.state = {colorIndex: 0, currentColor: {}, updateColor: true, topBarText: "", hasRenderedTopBar: false};
     this.updateColor = this.updateColor.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.setUpdateColorTrue = this.setUpdateColorTrue.bind(this);
+    this.setUpdateColorFalse = this.setUpdateColorFalse.bind(this);
   }
 
   scrollToTop() {
@@ -50,12 +54,12 @@ class Home extends React.Component {
 
       if(!this.state.hasRenderedTopBar){
         this.setState({updateColor: false});
-        this.setState({topBar: <TopBar currentColor={this.state.currentColor} onClick={console.log("hej")} onPointerLeave={console.log("hej då")}/>});
+        this.setState({topBarText: "CREMIS"});
         this.setState({hasRenderedTopBar: true});
       }
     } else {
       this.setState({updateColor: true});
-      this.setState({topBar: <div></div>});
+      this.setState({topBarText: ""});
       this.setState({hasRenderedTopBar: false});
 
     }
@@ -65,12 +69,22 @@ class Home extends React.Component {
     this.setState({currentColor: prideColors[this.state.colorIndex]});
   }
 
+  setUpdateColorTrue() {
+    this.setState({updateColor: true})
+  }
+
+  setUpdateColorFalse() {
+  this.setState({updateColor: false})
+  }
+
   render() {
     return(
       <body id="topOfBody">
+        <div onMouseOver={this.setUpdateColorTrue} onMouseLeave={this.setUpdateColorFalse} onClick={scroll.scrollToTop}>
+        <TopBar currentColor={this.state.currentColor} text={this.state.topBarText}/>
+        </div>
         <div>
-          {this.state.topBar}
-          <Welcome currentColor={this.state.currentColor} onClick={this.updateToggle}/>
+          <Welcome currentColor={this.state.currentColor}/>
           <VSpace padding={5000} />
           </div>
 
