@@ -21,26 +21,13 @@ class NameBox extends React.Component {
     this.setState({nameBox: prideColors[this.state.index]});
   }
 
-  getNextIndex() {
-
-  }
-
   componentDidMount() {
     this.setState({name: name})
-    this.interval = setInterval(() => {
-      this.setState({index: (this.state.index + 1) % prideColors.length});
-      this.updateNameBox();},
-      1000);
-  }
-
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
   }
 
   render() {
     return(
-      <div onClick={scroll.scrollToBottom} class={this.state.nameBox} style={this.props.currentColor}> {this.state.name}</div>
+      <div class={this.state.nameBox} style={this.props.currentColor}> {this.state.name}</div>
     );
   }
 

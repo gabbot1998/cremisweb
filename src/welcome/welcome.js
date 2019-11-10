@@ -9,13 +9,7 @@ class Welcome extends React.Component {
     super(props);
 
     this.state = {};
-    this.updateColor = this.updateColor.bind(this);
   }
-
-  updateColor(color) {
-
-  }
-
 
   render() {
     return(

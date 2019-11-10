@@ -4,6 +4,7 @@ import { Link, animateScroll as scroll} from "react-scroll";
 import VSpace from './../util/vSpace'
 import LongText from './longText'
 import TopBar from './topBar'
+
 import './home.css';
 
 const prideColors = [ {backgroundColor: "rgba(234, 62, 55, 0.9)"},
@@ -14,23 +15,14 @@ const prideColors = [ {backgroundColor: "rgba(234, 62, 55, 0.9)"},
                       {backgroundColor: "rgba(170, 82, 160, 0.9)"},
                      ];
 
-
 //The entire application will live inside of the home component!
-function MaybeTopBar(show) {
-  if(show) {
-    return <TopBar />;
-  } else {
-    return <div></div>;
-  }
-}
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {colorIndex: 0, currentColor: {}, toggleUpdate: true, showTopBar: false};
+
+    this.state = {colorIndex: 0, currentColor: {}, updateColor: true, topBar: <div></div>, hasRenderedTopBar: false};
     this.updateColor = this.updateColor.bind(this);
-    this.updateToggle = this.updateToggle.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
 
@@ -41,7 +33,7 @@ class Home extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     this.interval = setInterval(() => {
-      if(this.state.toggleUpdate){
+      if(this.state.updateColor){
         this.setState({colorIndex: (this.state.colorIndex + 1) % prideColors.length});
       }
       this.updateColor();},
@@ -54,10 +46,18 @@ class Home extends React.Component {
   }
 
   handleScroll(event) {
-    if(window.pageYOffset > 215){
-      this.setState({showTopBar: true})
+    if(window.pageYOffset > 167){
+
+      if(!this.state.hasRenderedTopBar){
+        this.setState({updateColor: false});
+        this.setState({topBar: <TopBar currentColor={this.state.currentColor} onClick={console.log("hej")} onPointerLeave={console.log("hej då")}/>});
+        this.setState({hasRenderedTopBar: true});
+      }
     } else {
-      this.setState({showTopBar: false})
+      this.setState({updateColor: true});
+      this.setState({topBar: <div></div>});
+      this.setState({hasRenderedTopBar: false});
+
     }
   }
 
@@ -65,16 +65,12 @@ class Home extends React.Component {
     this.setState({currentColor: prideColors[this.state.colorIndex]});
   }
 
-  updateToggle() {
-    this.setState({toggleUpdate: !this.state.toggleUpdate})
-  }
-
   render() {
     return(
       <body id="topOfBody">
-        <MaybeTopBar show={this.state.showTopBar}/>
         <div>
-          <Welcome currentColor={this.state.currentColor} onClick={scroll.scrollToBottom} onMouseOver={scroll.scrollToBottom}/>
+          {this.state.topBar}
+          <Welcome currentColor={this.state.currentColor} onClick={this.updateToggle}/>
           <VSpace padding={5000} />
           </div>
 
