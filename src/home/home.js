@@ -1,10 +1,14 @@
 import React from 'react';
 import Welcome from './../welcome/welcome';
-import { Link, animateScroll as scroll} from "react-scroll";
-import VSpace from './../util/vSpace'
-import LongText from './longText'
-import TopBar from './topBar'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import VSpace from './../util/vSpace';
+import LongText from './longText';
+import TopBar from './topBar';
+import NameBox from './../welcome/nameBox';
+import Button from './../util/button';
 
+import './../util/title.css';
+import './../util/body.css';
 import './home.css';
 
 const prideColors = [ {backgroundColor: "rgba(234, 62, 55, 0.9)"},
@@ -22,7 +26,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
 
-
+    document.body.style.overflow = "hidden";
     this.state = {colorIndex: 0, currentColor: {}, updateColor: true, topBarText: "", hasRenderedTopBar: false};
     this.updateColor = this.updateColor.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -84,13 +88,54 @@ class Home extends React.Component {
         <TopBar currentColor={this.state.currentColor} text={this.state.topBarText}/>
         </div>
         <div>
-          <Welcome currentColor={this.state.currentColor}/>
-          <VSpace padding={5000} />
+
+        <NameBox currentColor={this.state.currentColor}/>
+        <div class="welcome">
+        Welcome to my personal page. Let's see what we can achieve together!
+        <VSpace padding={200}/>
+        </div>
+        <div>
+        <Link activeClass="active"
+          className="test1"
+          to="navigation"
+          spy={false}
+          smooth={true}
+          duration={800}
+          offset={-75}
+        >
+        <Button text="ENTER"/>
+        </Link>
+        </div>
+
+
+          <div class="title">
+          <VSpace padding={400} />
+          <Element name="navigation" className="element">
+          Navigation
+          </Element>
+          </div>
+          <div>
+            <VSpace padding={30} />
+          </div>
+          <div class="body">
+            I'm happy you are taking your time exploring my webiste!
+            If you are on mobile, well I guess it sucks to suck...
+            If you are not on mobile, put your cursor over the tab in the upper left hand corner.
+            See how it is shifting colors! Wow, AMAZING right! Now press it, I'll wait... Wow wasn't that smooth, smooth scrolling amazing?
+            I think so too! Did you also notice that the tag now is the color of the titlebox when you pressed enter.
+            That feature took me like 30 hours to code so you better appreciate it!
+
+            Anyways, nice seeing you. This is a work in progress so don't expect too much...
+
+            Seeya!
+            /Gabriel
+          </div>
           </div>
 
           <div>
-            <h1 onClick={this.scrollToTop}>Back to top!</h1>
+            <VSpace padding={5000} />
           </div>
+
       </body>
     );
   }

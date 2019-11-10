@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+.styledButton {
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  padding: 15px 32px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+
+  margin: auto;
+  width: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.styledButton:hover {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100px;
+}
