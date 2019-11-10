@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cremisweb/static/css/main.1e5f8fa0.chunk.css",
-    "main.js": "/cremisweb/static/js/main.2fc114ad.chunk.js",
-    "main.js.map": "/cremisweb/static/js/main.2fc114ad.chunk.js.map",
+    "main.css": "/cremisweb/static/css/main.4dbb6f20.chunk.css",
+    "main.js": "/cremisweb/static/js/main.b0a24c6d.chunk.js",
+    "main.js.map": "/cremisweb/static/js/main.b0a24c6d.chunk.js.map",
     "runtime-main.js": "/cremisweb/static/js/runtime-main.31e0c826.js",
     "runtime-main.js.map": "/cremisweb/static/js/runtime-main.31e0c826.js.map",
-    "static/js/2.47f84cd9.chunk.js": "/cremisweb/static/js/2.47f84cd9.chunk.js",
-    "static/js/2.47f84cd9.chunk.js.map": "/cremisweb/static/js/2.47f84cd9.chunk.js.map",
+    "static/js/2.90b3d827.chunk.js": "/cremisweb/static/js/2.90b3d827.chunk.js",
+    "static/js/2.90b3d827.chunk.js.map": "/cremisweb/static/js/2.90b3d827.chunk.js.map",
     "index.html": "/cremisweb/index.html",
-    "precache-manifest.5f75c9f9cddc2273cd0f57055b38b8bf.js": "/cremisweb/precache-manifest.5f75c9f9cddc2273cd0f57055b38b8bf.js",
+    "precache-manifest.012a8f7d8d74422e0ee5ddf0a721bc87.js": "/cremisweb/precache-manifest.012a8f7d8d74422e0ee5ddf0a721bc87.js",
     "service-worker.js": "/cremisweb/service-worker.js",
-    "static/css/main.1e5f8fa0.chunk.css.map": "/cremisweb/static/css/main.1e5f8fa0.chunk.css.map",
+    "static/css/main.4dbb6f20.chunk.css.map": "/cremisweb/static/css/main.4dbb6f20.chunk.css.map",
     "static/media/logo.svg": "/cremisweb/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.31e0c826.js",
-    "static/js/2.47f84cd9.chunk.js",
-    "static/css/main.1e5f8fa0.chunk.css",
-    "static/js/main.2fc114ad.chunk.js"
+    "static/js/2.90b3d827.chunk.js",
+    "static/css/main.4dbb6f20.chunk.css",
+    "static/js/main.b0a24c6d.chunk.js"
   ]
 }
