@@ -3,20 +3,19 @@
 .styledButton {
   background-color: black;
   text-align: center;
+  align-self: center;
   cursor: pointer;
   color: white;
-  padding: 15px 32px;
   font-family: 'Karla', sans-serif;
   font-weight: 400;
-
-  margin: auto;
-  width: 50px;
+  margin: 0 auto;
+  width: 200px;
   padding-top: 20px;
   padding-bottom: 20px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.2s;
 }
 
 .styledButton:hover {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  width: 100px;
+  background-color: rgba(40, 40, 40, 1)
 }

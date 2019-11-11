@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './styledButton.css'
+
 class Button extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,7 @@ class Button extends React.Component {
 
   render() {
     return(
-      <div class="welcomeButton" style={{overflow: "hidden"}}>{this.props.text}</div>
+      <div class="styledButton">{this.props.text}</div>
     );
   }
 

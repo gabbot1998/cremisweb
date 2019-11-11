@@ -1,15 +1,12 @@
 import React from 'react';
-import Welcome from './../welcome/welcome';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import VSpace from './../util/vSpace';
-import LongText from './longText';
 import TopBar from './topBar';
 import NameBox from './../welcome/nameBox';
 import Button from './../util/button';
 
 import './../util/title.css';
 import './../util/body.css';
-import './home.css';
 
 const prideColors = [ {backgroundColor: "rgba(234, 62, 55, 0.9)"},
                       {backgroundColor: "rgba(246, 143, 31, 0.9)"},
@@ -27,11 +24,21 @@ class Home extends React.Component {
     super(props);
 
     document.body.style.overflow = "hidden";
-    this.state = {colorIndex: 0, currentColor: {}, updateColor: true, topBarText: "", hasRenderedTopBar: false};
+    this.state = {
+      colorIndex: 0,
+      currentColor: {},
+      updateColor: true,
+      topBarText: "",
+      menuItems: [],
+      hasRenderedTopBar: false,
+      currentPage: <div>This is the current page</div>
+    };
     this.updateColor = this.updateColor.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.setUpdateColorTrue = this.setUpdateColorTrue.bind(this);
-    this.setUpdateColorFalse = this.setUpdateColorFalse.bind(this);
+    this.mouseOverTopBar = this.mouseOverTopBar.bind(this);
+    this.mouseNotOnTopBar = this.mouseNotOnTopBar.bind(this);
+    this.switchScreen = this.switchScreen.bind(this);
+    this.sleep = this.sleep.bind(this);
   }
 
   scrollToTop() {
@@ -64,6 +71,7 @@ class Home extends React.Component {
     } else {
       this.setState({updateColor: true});
       this.setState({topBarText: ""});
+      this.setState({menuItems: []});
       this.setState({hasRenderedTopBar: false});
 
     }
@@ -73,31 +81,79 @@ class Home extends React.Component {
     this.setState({currentColor: prideColors[this.state.colorIndex]});
   }
 
-  setUpdateColorTrue() {
-    this.setState({updateColor: true})
+  mouseOverTopBar() {
+    this.setState({updateColor: true});
+    this.setState({menuItems: ["HOME", "PROJECTS", "ABOUT"]});
   }
 
-  setUpdateColorFalse() {
-  this.setState({updateColor: false})
+  mouseNotOnTopBar() {
+  this.setState({updateColor: false});
+  this.setState({menuItems: []});
+
   }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  renderNewScreen(newScreen) {
+    switch (newScreen) {
+      case "about":
+        this.setState({currentPage:
+          <div>
+          I have successfully switched to the about page. My name is Gabriel what is yours?
+          </div>
+        })
+        break;
+      case "projects":
+      this.setState({currentPage:
+        <div>
+        Now I am actually at the freaking projects page, but low and behold I have no Projects...
+        </div>
+      })
+      default:
+
+    }
+  }
+
+  async switchScreen(newScreen) {
+    scroll.scrollToBottom();
+    await this.sleep(600)
+    console.log(newScreen);
+    this.renderNewScreen(newScreen)
+    scroll.scrollTo(850);
+
+  }
+
 
   render() {
     return(
       <body id="topOfBody">
-        <div onMouseOver={this.setUpdateColorTrue} onMouseLeave={this.setUpdateColorFalse} onClick={scroll.scrollToTop}>
-        <TopBar currentColor={this.state.currentColor} text={this.state.topBarText}/>
-        </div>
-        <div>
 
+
+        <div onMouseOver={this.mouseOverTopBar} onMouseLeave={this.mouseNotOnTopBar} >
+        <TopBar currentColor={this.state.currentColor} text={this.state.topBarText} onClick={scroll.scrollToTop}/>
+        <div class="menuItem" style={{left: "70px"}} onClick={scroll.scrollToTop}>{this.state.menuItems[0]}</div>
+        <div class="menuItem" style={{left: "150px"}} newScreen={"projects"} onClick={() => this.switchScreen("projects")} >{this.state.menuItems[1]}</div>
+        <div class="menuItem" style={{left: "230px"}} newScreen={"about"} onClick={() => this.switchScreen("about")}>{this.state.menuItems[2]}</div>
+        </div>
+
+
+
+
+
+
+        <div>
         <NameBox currentColor={this.state.currentColor}/>
-        <div class="welcome">
+        <div class="title">
         Welcome to my personal page. Let's see what we can achieve together!
         <VSpace padding={200}/>
         </div>
         <div>
+        <div class="buttonField">
         <Link activeClass="active"
           className="test1"
-          to="navigation"
+          to="view"
           spy={false}
           smooth={true}
           duration={800}
@@ -106,11 +162,12 @@ class Home extends React.Component {
         <Button text="ENTER"/>
         </Link>
         </div>
+        </div>
 
 
           <div class="title">
           <VSpace padding={400} />
-          <Element name="navigation" className="element">
+          <Element name="view" className="element">
           Navigation
           </Element>
           </div>
@@ -118,22 +175,11 @@ class Home extends React.Component {
             <VSpace padding={30} />
           </div>
           <div class="body">
-            I'm happy you are taking your time exploring my webiste!
-            If you are on mobile, well I guess it sucks to suck...
-            If you are not on mobile, put your cursor over the tab in the upper left hand corner.
-            See how it is shifting colors! Wow, AMAZING right! Now press it, I'll wait... Wow wasn't that smooth, smooth scrolling amazing?
-            I think so too! Did you also notice that the tag now is the color of the titlebox when you pressed enter.
-            That feature took me like 30 hours to code so you better appreciate it!
-
-            Anyways, nice seeing you. This is a work in progress so don't expect too much...
-
-            Seeya!
-            /Gabriel
+            {this.state.currentPage}
           </div>
           </div>
-
           <div>
-            <VSpace padding={5000} />
+          <VSpace padding={1500} />
           </div>
 
       </body>

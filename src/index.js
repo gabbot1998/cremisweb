@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import TestApp from './TestApp';
-import Welcome from './welcome/welcome'
 import Home from './home/home'
 import * as serviceWorker from './serviceWorker';
 

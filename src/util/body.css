@@ -5,4 +5,5 @@
   padding: 15px 32px;
   font-family: 'Karla', sans-serif;
   font-size: 30px;
+  overflow: scroll;
 }
