@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0a76ca99564e9d72352886cc85f9cc7",
+    "revision": "fa91ccceb74b1304450ae4e171ac9afa",
     "url": "/cremisweb/index.html"
   },
   {
-    "revision": "aacd203c6417a0faa0d3",
-    "url": "/cremisweb/static/css/main.176f1af5.chunk.css"
+    "revision": "e4f287427d2a26bc3136",
+    "url": "/cremisweb/static/css/main.66fe9408.chunk.css"
   },
   {
     "revision": "b30f4dc87ee25d450636",
     "url": "/cremisweb/static/js/2.82841d94.chunk.js"
   },
   {
-    "revision": "aacd203c6417a0faa0d3",
+    "revision": "e4f287427d2a26bc3136",
     "url": "/cremisweb/static/js/main.acb9c42b.chunk.js"
   },
   {
