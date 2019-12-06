@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cremisweb/static/css/main.a2352873.chunk.css",
-    "main.js": "/cremisweb/static/js/main.534492ae.chunk.js",
-    "main.js.map": "/cremisweb/static/js/main.534492ae.chunk.js.map",
+    "main.js": "/cremisweb/static/js/main.fbae1ce8.chunk.js",
+    "main.js.map": "/cremisweb/static/js/main.fbae1ce8.chunk.js.map",
     "runtime-main.js": "/cremisweb/static/js/runtime-main.31e0c826.js",
     "runtime-main.js.map": "/cremisweb/static/js/runtime-main.31e0c826.js.map",
     "static/js/2.ce1118a8.chunk.js": "/cremisweb/static/js/2.ce1118a8.chunk.js",
     "static/js/2.ce1118a8.chunk.js.map": "/cremisweb/static/js/2.ce1118a8.chunk.js.map",
     "index.html": "/cremisweb/index.html",
-    "precache-manifest.f93e1ce00ad333c7f244282c7c28770c.js": "/cremisweb/precache-manifest.f93e1ce00ad333c7f244282c7c28770c.js",
+    "precache-manifest.5a5bccaf7b9c584219b479ec6371d1f1.js": "/cremisweb/precache-manifest.5a5bccaf7b9c584219b479ec6371d1f1.js",
     "service-worker.js": "/cremisweb/service-worker.js",
     "static/css/main.a2352873.chunk.css.map": "/cremisweb/static/css/main.a2352873.chunk.css.map",
     "static/media/logo.svg": "/cremisweb/static/media/logo.25bf045c.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.31e0c826.js",
     "static/js/2.ce1118a8.chunk.js",
     "static/css/main.a2352873.chunk.css",
-    "static/js/main.534492ae.chunk.js"
+    "static/js/main.fbae1ce8.chunk.js"
   ]
 }
